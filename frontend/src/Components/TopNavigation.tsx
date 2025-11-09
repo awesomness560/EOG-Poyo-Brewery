@@ -53,6 +53,15 @@ export default function TopNavigation() {
             '&.Mui-selected': { color: 'white' },
           }}
         />
+        <BottomNavigationAction
+          label=""
+          icon={<ArchiveIcon />}
+          onClick={() => navigate('/history')}
+          sx={{
+            color: 'white',
+            '&.Mui-selected': { color: 'white' },
+          }}
+        />
       </BottomNavigation>
     </Paper>
   );
