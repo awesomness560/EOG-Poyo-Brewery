@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import TopNavigation from '../Components/TopNavigation';
 import { motion } from 'framer-motion'
+import { getDashboardData } from '../api';
 
 const Map:React.FC = () => {
+
+  const [dashBoardData, setData] = useState([])
+
+  useEffect(() => {
+
+    console.log(getDashboardData())
+  }, [dashBoardData])
+
   return (
     <div className="flex justify-center bg-cover bg-center relative min-h-screen w-full items-center" 
          style={{backgroundImage: "url('assets/MapBG.svg')", overflow: 'hidden'}}>  
