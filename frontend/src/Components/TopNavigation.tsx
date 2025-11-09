@@ -23,7 +23,7 @@ export default function TopNavigation() {
         onChange={(event, newValue) => setValue(newValue)}
         sx={{ 
           width: '100%',
-          bgcolor: 'black' // Add black background here
+          bgcolor: '#1B041E'
         }}
       >
         <BottomNavigationAction
