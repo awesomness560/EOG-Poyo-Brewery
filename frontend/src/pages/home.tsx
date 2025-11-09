@@ -2,7 +2,11 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className="bg-black">Home</div>
+    <div className="flex justify-center bg-cover bg-center relative h-[3000px] w-full" 
+         style={{backgroundImage: "url('assets/HomeBG.svg')", overflow: 'hidden'}}>  
+
+         
+    </div>
   )
 }
 
