@@ -20,6 +20,7 @@ const Predictions: React.FC = () => {
           You Look To The Stars To Predict...
         </span>
         <div className="flex w-full h-[550px] items-center justify-center relative select-none" >
+          <img className="absolute scale-80 top-108 " src="/assets/Carpet.svg"/>
           <img className="absolute scale-80 top-0 drop-shadow-fuchsia-400 drop-shadow-2xl" src="/assets/CrystalBall.svg" onClick={scrollToTarget}/>
           <motion.img className="absolute scale-80 mt-3 top-0 select-none" src="/assets/BallGoop.svg" initial={{rotate: 0}} animate={{rotate: 360}} transition={{repeat: Infinity, duration: 15, ease: 'linear'}} onClick={scrollToTarget}/>
         </div>
