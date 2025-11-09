@@ -49,5 +49,16 @@ async def get_full_network():
         "market": results[2].json()
     }
 
+@app.get("/api/dashboard/data")
+async def get_data():
+    """Returns raw data from the Data endpoint"""
+    try:
+        client = data_service.client
+        response = await client.get("https://hackutd2025.eog.systems/api/Data")
+        return response.json()
+    except Exception as e:
+        print(f"Error fetching data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
