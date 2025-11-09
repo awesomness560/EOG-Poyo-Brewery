@@ -3,10 +3,10 @@ import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import MapIcon from '@mui/icons-material/Map';
 import { useNavigate } from 'react-router-dom';
-import ArchiveIcon from '@mui/icons-material/Archive';
-
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 export default function TopNavigation() {
   const [value, setValue] = React.useState(0);
@@ -25,6 +25,7 @@ export default function TopNavigation() {
           width: '100%',
           bgcolor: '#1B041E'
         }}
+        
       >
         <BottomNavigationAction
           label=""
@@ -37,7 +38,7 @@ export default function TopNavigation() {
         />
         <BottomNavigationAction
           label=""
-          icon={<FavoriteIcon />}
+          icon={<MapIcon />}
           onClick={() => navigate('/map')}
           sx={{
             color: 'white',
@@ -46,8 +47,17 @@ export default function TopNavigation() {
         />
         <BottomNavigationAction
           label=""
-          icon={<ArchiveIcon />}
+          icon={<AutoAwesomeIcon />}
           onClick={() => navigate('/predictions')}
+          sx={{
+            color: 'white',
+            '&.Mui-selected': { color: 'white' },
+          }}
+        />
+        <BottomNavigationAction
+          label=""
+          icon={<HistoryEduIcon />}
+          onClick={() => navigate('/history')}
           sx={{
             color: 'white',
             '&.Mui-selected': { color: 'white' },

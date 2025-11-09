@@ -1,6 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: TitanOne-Regular;
+  src: url("../src/assets/fonts/TitanOne-Regular.ttf");
+}
 
+@theme {
+  --font-titanOne-regular: TitanOne-Regular, sans-serif;
+  --color-containerColor: #300E3D;
+  --color-darkerBlue: #003281;
+  --color-darkBlue: #0047B5;
+  --color-blue: #005FF2;
+  --color-babyBlue: #406AFE;
+  --color-darkTeal: #186198;
+  --color-clearBlue: #40A4CC;
+}
 
 a {
   font-weight: 500;
